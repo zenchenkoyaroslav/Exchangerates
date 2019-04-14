@@ -21,7 +21,6 @@ class DateDelegateAdapter : ViewTypeDelegateAdapter {
         val format = SimpleDateFormat("MM.dd.YYYY")
 
         fun bind(item: DateItem) = with(itemView) {
-            //today_date.text = "${item.todayDate.get(Calendar.MONTH)}.${item.todayDate.get(Calendar.DAY_OF_MONTH)}.${item.todayDate.get(Calendar.YEAR)}"
             today_date.text = format.format(item.todayDate.time)
             tomorrow_date.text = format.format(item.tomorrowDate.time)
         }

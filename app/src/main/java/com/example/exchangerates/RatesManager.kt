@@ -3,24 +3,27 @@ package com.example.exchangerates
 import rx.Observable
 
 
-class RatesManager {
+class RatesManager(private val api: RestApi = RestApi()) {
 
-    fun getRates(): Observable<List<RatesItem>> {
+    fun getRates(date: String): Observable<List<RatesItem>> {
         return Observable.create {
                 subscriber ->
 
-            val news = mutableListOf<RatesItem>()
-            for (i in 1..10) {
-                news.add(RatesItem(
-                    "USD",
-                    "1",
-                    "Доллар США",
-                    "1,9452",
-                    "1,9444"
-                ))
+            val callResponse = api.getRates(date)
+            val response = callResponse.execute()
+
+            if (response.isSuccessful){
+                val rates = response.body().Currency?.map {
+                    val item = it
+                    RatesItem(item.CharCode, item.Scale, item.Name, item.Rate, null)
+                }
+                subscriber.onNext(rates)
+                subscriber.onCompleted()
+                subscriber.unsubscribe()
+            }else{
+                subscriber.onError(Throwable(response.message()))
             }
-            subscriber.onNext(news)
-            subscriber.onCompleted()
+
         }
     }
 }

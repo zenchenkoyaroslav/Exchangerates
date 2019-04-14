@@ -38,10 +38,10 @@ class RatesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         notifyItemRangeChanged(initPosition, items.size + 1)
     }
 
-    fun addDate(date: List<DateItem>){
+    fun addDate(date: DateItem){
         //val initPosition = items.size - 1
 
-        items.addAll(date)
+        items.add(date)
         //notifyItemRangeChanged(initPosition, items.size)
     }
 /*
