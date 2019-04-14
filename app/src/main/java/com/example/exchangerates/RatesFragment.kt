@@ -42,7 +42,7 @@ class RatesFragment : RxBaseFragment() {
             requestRates(format.format(date.tomorrowDate.time), tomorrowRatesItems)
             Thread.sleep(15000)
             mergeRates()
-            showRates()
+            showRates();
         }
     }
 
