@@ -66,7 +66,6 @@ class RatesFragment : RxBaseFragment() {
                     fullRequest()
                 }
             }else {
-                //Log.e("Chek", "there is request")
                 fullRequest()
             }
             if(Globals.isSuccess) {
