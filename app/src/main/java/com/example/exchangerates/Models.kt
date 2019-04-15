@@ -17,4 +17,5 @@ data class DateItem(
     val tomorrowDate: Calendar
 ): ViewType {
     override fun getViewType() = AdapterConstants.DATE
+
 }

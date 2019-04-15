@@ -6,7 +6,7 @@ import org.simpleframework.xml.Root
 
 @Root(name = "DailyExRates", strict = false)
 class NBRBDailyExRatesResponse{
-    @field:ElementList(inline = true)
+    @field:ElementList(inline = true, required = false)
     internal var Currency: List<NBRBCurrencyResponse>? = null
 }
 

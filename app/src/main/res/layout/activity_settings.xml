@@ -5,15 +5,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
+                tools:context=".SettingsActivity">
     <android.support.design.widget.AppBarLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/toolbar_settings"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
@@ -22,12 +21,10 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <FrameLayout
-            android:id="@+id/activity_base_content"
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/settings_list"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-    </FrameLayout>
+            android:layout_height="match_parent"/>
 
 </android.support.design.widget.CoordinatorLayout>

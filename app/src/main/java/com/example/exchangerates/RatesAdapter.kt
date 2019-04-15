@@ -8,10 +8,14 @@ class RatesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var items: ArrayList<ViewType>
     private var delegateAdapters = SparseArrayCompat<ViewTypeDelegateAdapter>()
+    private val notFoundItem = object : ViewType {
+        override fun getViewType() = AdapterConstants.NOTFOUND
+    }
 
     init {
         delegateAdapters.put(AdapterConstants.DATE, DateDelegateAdapter())
         delegateAdapters.put(AdapterConstants.RATES, RatesDelegateAdapter())
+        delegateAdapters.put(AdapterConstants.NOTFOUND, NotFoundDelegateAdapter())
         items = ArrayList()
     }
 
@@ -43,6 +47,10 @@ class RatesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         items.add(date)
         //notifyItemRangeChanged(initPosition, items.size)
+    }
+
+    fun addNotFound(){
+        items.add(notFoundItem)
     }
 /*
     fun clearAndAddRates(news: List<RatesItem>) {

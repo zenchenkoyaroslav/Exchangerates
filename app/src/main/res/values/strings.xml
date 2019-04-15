@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Exchange rates</string>
     <string name="main_activity_name">Курсы валют</string>
-    <string name="action_settings">Settings</string>
+    <string name="settings_activity_name">Настройки валют</string>
+    <string name="action_settings">Настройки</string>
+    <string name="ok_button">OK</string>
 </resources>

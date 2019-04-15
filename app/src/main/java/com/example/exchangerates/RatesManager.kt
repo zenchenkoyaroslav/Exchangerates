@@ -19,7 +19,6 @@ class RatesManager(private val api: RestApi = RestApi()) {
                 }
                 subscriber.onNext(rates)
                 subscriber.onCompleted()
-                subscriber.unsubscribe()
             }else{
                 subscriber.onError(Throwable(response.message()))
             }
