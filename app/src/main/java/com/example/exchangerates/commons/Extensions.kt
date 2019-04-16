@@ -1,4 +1,4 @@
-package com.example.exchangerates
+package com.example.exchangerates.commons
 
 import android.view.LayoutInflater
 import android.view.View

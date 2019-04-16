@@ -1,5 +1,7 @@
-package com.example.exchangerates
+package com.example.exchangerates.features
 
+import com.example.exchangerates.api.RestApi
+import com.example.exchangerates.commons.RatesItem
 import rx.Observable
 
 

@@ -1,4 +1,4 @@
-package com.example.exchangerates
+package com.example.exchangerates.api
 
 import okhttp3.OkHttpClient
 import org.simpleframework.xml.convert.AnnotationStrategy

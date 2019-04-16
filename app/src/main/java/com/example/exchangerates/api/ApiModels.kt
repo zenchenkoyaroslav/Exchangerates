@@ -1,4 +1,4 @@
-package com.example.exchangerates
+package com.example.exchangerates.api
 
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.ElementList

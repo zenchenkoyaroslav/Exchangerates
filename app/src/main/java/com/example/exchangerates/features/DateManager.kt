@@ -1,5 +1,6 @@
-package com.example.exchangerates
+package com.example.exchangerates.features
 
+import com.example.exchangerates.commons.DateItem
 import java.util.*
 
 class DateManager {

@@ -1,4 +1,4 @@
-package com.example.exchangerates
+package com.example.exchangerates.commons
 
 
 class Globals {

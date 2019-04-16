@@ -1,12 +1,14 @@
-package com.example.exchangerates
+package com.example.exchangerates.features
 
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.design.widget.Snackbar
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.*
+import com.example.exchangerates.R
+import com.example.exchangerates.features.adapter.RatesAdapter
+import com.example.exchangerates.commons.*
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.rates_fragment.*
@@ -144,7 +146,7 @@ class RatesFragment : RxBaseFragment() {
         (rates_list.adapter as RatesAdapter).addRates(ratesItems)
     }
 
-    private fun requestDates(calendar: Calendar): DateItem{
+    private fun requestDates(calendar: Calendar): DateItem {
         return dateManager.getDate(calendar)
     }
 

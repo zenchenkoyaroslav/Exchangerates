@@ -1,4 +1,4 @@
-package com.example.exchangerates
+package com.example.exchangerates.api
 
 import retrofit2.Call
 import retrofit2.http.GET

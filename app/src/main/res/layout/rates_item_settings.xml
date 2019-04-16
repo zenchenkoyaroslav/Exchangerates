@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dip">
+
+    <TextView
+            android:id="@+id/CharCode"
+            android:layout_width="125dp"
+            android:layout_height="20dp"
+            android:textColor="#343434"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            android:textStyle="bold"
+            tools:text="USD"
+            android:layout_marginLeft="1dp"
+            android:layout_marginStart="1dp"/>
+    <TextView
+            android:id="@+id/Name"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:textColor="#343434"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            tools:text="100 гривен"
+            android:layout_below="@+id/CharCode"/>
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/visible_switch"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/CharCode" android:layout_toRightOf="@+id/CharCode"/>
+
+</RelativeLayout>

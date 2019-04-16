@@ -1,4 +1,4 @@
-package com.example.exchangerates
+package com.example.exchangerates.commons
 
 import android.support.v4.app.Fragment
 import rx.subscriptions.CompositeSubscription

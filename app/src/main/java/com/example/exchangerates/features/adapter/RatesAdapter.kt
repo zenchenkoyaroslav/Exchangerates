@@ -1,8 +1,13 @@
-package com.example.exchangerates
+package com.example.exchangerates.features.adapter
 
 import android.support.v4.util.SparseArrayCompat
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
+import com.example.exchangerates.commons.DateItem
+import com.example.exchangerates.commons.RatesItem
+import com.example.exchangerates.commons.adapter.AdapterConstants
+import com.example.exchangerates.commons.adapter.ViewType
+import com.example.exchangerates.commons.adapter.ViewTypeDelegateAdapter
 
 class RatesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -15,7 +20,9 @@ class RatesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     init {
         delegateAdapters.put(AdapterConstants.DATE, DateDelegateAdapter())
         delegateAdapters.put(AdapterConstants.RATES, RatesDelegateAdapter())
-        delegateAdapters.put(AdapterConstants.NOTFOUND, NotFoundDelegateAdapter())
+        delegateAdapters.put(AdapterConstants.NOTFOUND,
+            NotFoundDelegateAdapter()
+        )
         items = ArrayList()
     }
 

@@ -1,4 +1,4 @@
-package com.example.exchangerates
+package com.example.exchangerates.commons.adapter
 
 object AdapterConstants {
     val RATES = 1

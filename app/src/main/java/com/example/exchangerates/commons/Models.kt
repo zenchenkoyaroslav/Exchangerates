@@ -1,5 +1,7 @@
-package com.example.exchangerates
+package com.example.exchangerates.commons
 
+import com.example.exchangerates.commons.adapter.AdapterConstants
+import com.example.exchangerates.commons.adapter.ViewType
 import java.util.*
 
 data class RatesItem(
